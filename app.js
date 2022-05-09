@@ -2,6 +2,9 @@
 require('dotenv').config()
 const platformClient = require('purecloud-platform-client-v2');
 
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
+
 const client = platformClient.ApiClient.instance;
 client.loginClientCredentialsGrant(clientId,clientSecret)
 .then(()=> {
