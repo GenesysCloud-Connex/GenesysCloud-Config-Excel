@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dotenv": "^16.0.0",
+    "fs": "*",
     "purecloud-platform-client-v2": "^136.0.0"
   }
 }
