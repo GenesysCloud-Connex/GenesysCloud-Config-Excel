@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "purecloud-platform-client-v2": "^136.0.0"
+  }
+}
