@@ -1,16 +1,18 @@
 // Obtain a reference to the platformClient object
-require('dotenv').config()
+require('dotenv').config();
 const platformClient = require('purecloud-platform-client-v2');
-
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-
 const client = platformClient.ApiClient.instance;
-client.loginClientCredentialsGrant(clientId,clientSecret)
-.then(()=> {
-  // Do authenticated things
+
+client.setEnvironment(platformClient.PureCloudRegionHosts.ca_central_1);
+
+const CLIENT_ID = process.env.GENESYS_CLOUD_CLIENT_ID;
+const CLIENT_SECRET = process.env.GENESYS_CLOUD_CLIENT_SECRET;
+
+// Authenticate with Genesys Cloud
+client.loginClientCredentialsGrant(CLIENT_ID, CLIENT_SECRET)
+.then(() => {
+  console.log("Authentication Success!")
 })
 .catch((err) => {
- // Handle failure response
- console.log(err);
+  console.error(err);
 });
