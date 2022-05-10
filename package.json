@@ -2,6 +2,10 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "fs": "*",
-    "purecloud-platform-client-v2": "^136.0.0"
+    "json-as-xlsx": "^2.4.2",
+    "path": "^0.12.7",
+    "purecloud-platform-client-v2": "^136.0.0",
+    "require": "^2.4.20",
+    "xlsx": "^0.18.5"
   }
 }
